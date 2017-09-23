@@ -1,0 +1,34 @@
+{
+  "name": "streak-rain.js",
+  "officialName": "streak-rain.js",
+  "version": "1.0.0",
+  "summary": "A streak rain on the backgroud of website",
+  "description": "A streak rain on the backgroud of website",
+  "author": {
+    "name": "zhusaidong",
+    "url": "https://github.com/zhusaidong"
+  },
+  "homepage": "https://github.com/zhusaidong",
+  "license": "MIT",
+  "keywords": [
+    "canvas",
+    "html5",
+    "nest"
+  ],
+  "main": "dist/streak-rain-min.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zhusaidong/streak-rain.js"
+  },
+  "bugs": {
+    "url": "https://github.com/zhusaidong/streak-rain/issues"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-minify": "^1.0.0"
+  },
+  "scripts": {
+    "build": "gulp"
+  },
+  "dependencies": {}
+}
