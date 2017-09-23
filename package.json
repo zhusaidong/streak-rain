@@ -29,7 +29,7 @@
     "grunt-contrib-uglify": "~0.5.0"
   },
   "scripts": {
-    "build": "gulp"
+    "build": "grunt"
   },
   "dependencies": {}
 }
