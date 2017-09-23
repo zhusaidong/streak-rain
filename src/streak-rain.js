@@ -1,37 +1,10 @@
 /*
-Streak Rain
-author zsdroid
+StreakRain
 */
-class point
+
+function StreakRain(config)
 {
-	constructor(x,y)
-	{
-		this.x = x;
-		this.y = y;
-	}
-}
-class rainObject
-{
-	constructor(x,y,windPower)
-	{
-		this.x = x;
-		this.y = y;
-		var xdu = 150 * windPower;
-		this.rain = {
-			start:new point(this.x - xdu,0 - this.y),
-			end	 :new point(this.x + windPower * 5 - xdu,0)
-		};
-		//有风向是长度减半,因为斜边太长了
-		if(xdu != 0)
-		{
-			this.rain.end.x = this.rain.start.x + Math.floor((this.rain.start.x - this.rain.end.x) / 2)
-			this.rain.end.y = this.rain.start.y + Math.floor((this.rain.start.y - this.rain.end.y) / 2)
-		}
-	}
-}
-class StreakRain
-{
-	constructor(config)
+	this._constructor = function(config)
 	{
 		//雨滴下落距离(速度)
 		this.rainDownSpeed = (config.speed || 60) / 60;
@@ -59,7 +32,7 @@ class StreakRain
 		}
 	}
 	//init
-	init()
+	this.init = function()
 	{
 		//create canvas
 		this.canvas = document.createElement('canvas');
@@ -79,7 +52,7 @@ class StreakRain
 		this.ctx.strokeStyle = this.fgColor;
 	}
 	//get random rain
-	randomRain()
+	this.randomRain = function()
 	{
 		//风向
 		var wind = this.windPower / Math.abs(this.windPower);
@@ -102,7 +75,7 @@ class StreakRain
 		}
 	}
 	//run
-	run()
+	this.run = function()
 	{
 		if(!window.requestAnimationFrame)
 		{
@@ -148,7 +121,7 @@ class StreakRain
 		this.randomRain(this.rainNumber);
 	}
 	//delete the overflowed rain 
-	deleteRain(needDeleteRain)
+	this.deleteRain = function(needDeleteRain)
 	{
 		var r = new Array;
 		for(var i in this.rains)
@@ -161,7 +134,7 @@ class StreakRain
 		this.rains = r;
 	}
 	//window resize event
-	windowResize()
+	this.windowResize = function()
 	{
 		var that = this;
 		window.onresize = function()
@@ -171,7 +144,7 @@ class StreakRain
 		};
 	}
 	//mouse move event
-	mousePosition()
+	this.mousePosition = function()
 	{
 		var windPower = this.windPower;
 		var that = this;
@@ -185,12 +158,12 @@ class StreakRain
 			},false);
 	}
 	//get random number
-	getRandom(minRandom,maxRandom)
+	this.getRandom = function(minRandom,maxRandom)
 	{
 		return Math.floor(Math.random() * (maxRandom - minRandom + 1) + minRandom);
 	}
 	//draw line with two points
-	line(startPoint,endPoint)
+	this.line = function(startPoint,endPoint)
 	{
 		this.ctx.beginPath();
 		this.ctx.moveTo(startPoint.x,startPoint.y);
@@ -200,9 +173,10 @@ class StreakRain
 		this.ctx.closePath();
 	}
 	//clear the screen
-	clearScreen()
+	this.clearScreen = function()
 	{
 		this.ctx.clearRect(0,0,this.canvas.width,this.canvas.height);
 		this.ctx.globalAlpha = this.cOpacity;
 	}
+	this._constructor(config);
 }
