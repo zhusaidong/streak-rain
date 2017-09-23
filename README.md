@@ -29,5 +29,7 @@ then ok!
  - **`number`**: the rain number. default: `'60'` ;
  - **`fgColor`**: the foreground color. default: `'#ee0000'` ;
  - **`bgColor`**: the background color. default: `'#ffffff'` ;
- 
- 
+
+## preview
+
+[http://github.zhusaidong.cn/streak-rain/](http://github.zhusaidong.cn/streak-rain/)
