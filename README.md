@@ -7,7 +7,7 @@
 
 ## usage
 
-```
+```html
 <script src="./dist/streak-rain-min.js"></script>
 <script>
 	new StreakRain({
