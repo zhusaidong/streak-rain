@@ -30,6 +30,10 @@ then ok!
  - **`fgColor`**: the foreground color. default: `'#ee0000'` ;
  - **`bgColor`**: the background color. default: `'#ffffff'` ;
 
-## preview
+## demo
 
 [http://github.zhusaidong.cn/streak-rain/](http://github.zhusaidong.cn/streak-rain/)
+
+## preview
+
+[http://blog.zhusaidong.cn/](http://blog.zhusaidong.cn/)
